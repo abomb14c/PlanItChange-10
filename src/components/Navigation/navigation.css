@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  margin-left: 2%;
+  color: #FDF3E7;
+}
+
+a:hover {
+  color:#7E8F7C;
+}
+
+.logo {
+  background-image: url('../../Assets/logo.png');
+  background-position: center;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  height: 120px;
+  width: 100%;
+}
+
+.nav {
+  background-color: #282c34;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
+  height: 150px;
+  padding-top: 2%;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex; 
+  justify-content: flex-end;
+  padding-right: 5%;
+}
