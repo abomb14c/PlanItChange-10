@@ -1,0 +1,25 @@
+.create-user-container, .login-user-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  text-align: left;
+  width: 25%;
+}
+
+.login-container {
+  background-color: rgb(253, 243,	231, .65);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 10%;
+  padding-left: 3%;
+  width: 100%;
+}
+
+.create-user-container {
+  border-right: 3px solid #C63D0F;;
+}
+
+.login-user-container {
+  margin-left: 5%;
+}
