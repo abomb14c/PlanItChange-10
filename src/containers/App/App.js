@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Navigation from '../../components/Navigation/Navigation';
 import Login from '../../components/Login/Login';
@@ -22,10 +23,23 @@ class App extends Component {
                 <Login />
             )}
           />
+          <Route
+            exact path= "/"
+            render={() => (
+              !this.props.user.user_id ?
+                <Redirect to="/login" /> :
+                // <Home/>
+                <Login />
+            )}
+          />
           </Switch>
       </div>
     );
   }
 }
 
-export default withRouter(App);
+export const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default withRouter(connect(mapStateToProps, null)(App));
