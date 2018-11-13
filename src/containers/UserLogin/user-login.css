@@ -1,0 +1,30 @@
+.login-button {
+  border: none;
+  background-color: #7E8F7C;
+  color: #fff;
+  font-size: 14px;
+  width: 83%;
+  height: 35px;
+}
+
+.login-button:hover {
+  background-color: #C63D0F;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-user {
+  border: none;
+  height: 35px;
+  margin-bottom: 5%;
+  padding-left: 2%;
+  width: 80%;
+}
+
+.login-title {
+  color: #C63D0F;
+  font-size: 28px;
+}
