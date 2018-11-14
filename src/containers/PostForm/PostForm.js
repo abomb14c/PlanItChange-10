@@ -7,7 +7,7 @@ class PostForm extends Component {
 
     this.state = {
       title:'',
-      body:''
+      body:""
     }
   }
 
@@ -20,26 +20,21 @@ class PostForm extends Component {
 
   render(){
     return (
-      <div className='post-form'>
-        <form>
-          <input
-            className="post-title"
-            type="text"
-            name="title"
-            value={this.state.title}
-            placeholder="Title"
-            onChange={this.handleChange}
-          />
-          <input
+      <div className='post-form-container'>
+        <div className="post-form">
+          <label className="label">
+            What's On Your Mind?
+          <textarea
             className="post-body"
             type="text"
             name="body"
             value={this.state.body}
-            placeholder="Message"
             onChange={this.handleChange}
           />
+          </label>
           <button className="submit-button">Submit</button>
-        </form>
+          </div>
+        {/* </form> */}
       </div>
     )
   }
