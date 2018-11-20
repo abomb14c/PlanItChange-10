@@ -15,8 +15,8 @@ class Post extends Component {
     return (
       <div className="post-container">
         <div className="post-text">
-          <h1>{this.props.post.title}</h1>
-          <p>{this.props.post.desc}</p>
+          <h1 className="post-title">{this.props.post.title}</h1>
+          <p className="post-desc">{this.props.post.desc}</p>
         </div>
       </div>
     )
