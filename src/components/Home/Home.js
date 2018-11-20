@@ -3,6 +3,7 @@ import './home.css';
 
 import PostForm from '../../containers/PostForm/PostForm';
 import { Feed } from '../Feed/Feed';
+import { NoFeed } from '../NoFeed/NoFeed';
 
 class Home extends Component  {
   constructor(props){
@@ -16,6 +17,7 @@ class Home extends Component  {
   componentDidMount = () => {
 
   }
+
   render() {
   return (
     <div className="home">
@@ -23,9 +25,14 @@ class Home extends Component  {
         <p className="current-location-text">Updates for Denver</p>
       </div>
       <PostForm />
-      {this.state.feed.length ? 
-        <Feed />:
-        null}
+      <div className="feed-container">
+        {
+          this.state.feed.length ? 
+            <Feed />
+            :
+            <NoFeed />
+        }
+      </div>
     </div>
   )
 }
