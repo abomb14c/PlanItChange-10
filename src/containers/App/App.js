@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import Navigation from '../../components/Navigation/Navigation';
 import Login from '../../components/Login/Login';
+import Home from '../../components/Home/Home';
 
 class App extends Component {
   render() {
@@ -28,8 +29,7 @@ class App extends Component {
             render={() => (
               !this.props.user.user_id ?
                 <Redirect to="/login" /> :
-                // <Home/>
-                <Login />
+                <Home/>
             )}
           />
           </Switch>

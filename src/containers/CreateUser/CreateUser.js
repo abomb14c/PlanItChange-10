@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { updateUser } from '../../actions/updateUser/updateUser';
 import './create-user.css';
 import PropTypes from 'prop-types';
+// import Script from 'react-load-script';
+import LocationAutocomplete from 'location-autocomplete';
+import {googlePlaces} from '../../keys';
+
+
 
 export class CreateUser extends Component {
   constructor(props){
@@ -12,7 +17,8 @@ export class CreateUser extends Component {
     this.state = {
       username: '',
       email: '',
-      password: ''
+      password: '',
+      location: '',
     };
   }
 
@@ -22,6 +28,16 @@ export class CreateUser extends Component {
       [name]: value
     });
   };
+
+  handleDropDown = (data) => {
+    const place = data.autocomplete.getPlace();
+    const address = place.formatted_address
+    console.log(address)
+    this.setState({
+      location: address
+    })
+    console.log(this.state)
+  }
 
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -41,7 +57,7 @@ export class CreateUser extends Component {
           type="text"
           name="username"
           value={this.state.username}
-          placeholder="username"
+          placeholder="Username"
           onChange={this.handleChange}
         />
         <input
@@ -59,6 +75,25 @@ export class CreateUser extends Component {
           value={this.state.password}
           placeholder="Password"
           onChange={this.handleChange}
+        />
+        {/* <input
+          className="create-user"
+          id='autocomplete'
+          type="text"
+          name="location"
+          value={this.state.query}
+          placeholder="location"
+          onChange={this.handleChange}
+        /> */}
+        <LocationAutocomplete
+          className='create-user'
+          name="location"
+          placeholder="Location"
+          targetArea="USA"
+          locationType="(cities)"
+          googleAPIKey={googlePlaces}
+          onChange={this.handleChange}
+          onDropdownSelect={this.handleDropDown}
         />
         <button type="submit" className="create-user-button">Create Account</button>
       </form>
