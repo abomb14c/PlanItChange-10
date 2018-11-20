@@ -7,8 +7,35 @@ class Post extends Component {
     super(props)
 
     this.state= {
+      likes: 0,
+      updated: false
 
     }
+  }
+
+  updateLikes = () => {
+    if(!this.state.updated) {
+      this.setState((prevState, props) => {
+        return {
+          likes: prevState.likes + 1, 
+          updated: true
+        }
+      })
+      console.log(this.state)
+    } else {
+
+      this.setState((prevState, props) => {
+        return {
+          likes: prevState.likes - 1,
+          updated: false
+        }
+      })
+      console.log(this.state)
+    }
+  }
+
+  componentDidMount = () => {
+    this.updateLikes()
   }
 
   render(){
@@ -19,9 +46,15 @@ class Post extends Component {
           <p className="post-desc">{this.props.post.desc}</p>
         </div>
         <div className="interact-container">
-          <div className="like-container">
-            <div className="like-icon"></div>
-          </div>
+          <div 
+            onClick={this.updateLikes}
+            className={this.state.updated ? 'like-container' : 'static-icon'}
+            >
+            {/* <div
+              className={this.state.updated === true ? 'like-container' : 'static-icon'}
+            >
+            </div> */}
+            </div>
         </div>
       </div>
     )

@@ -40,3 +40,11 @@
 .like-container:hover {
   background-image: url('../../Assets/origami-bird (2).png');
 }
+
+.static-icon {
+  background-image: url('../../Assets/origami-bird (2).png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10%;
+  height: 100%;
+}
