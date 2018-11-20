@@ -10,7 +10,7 @@ class Home extends Component  {
     super(props)
 
     this.state = {
-      feed: []
+      feed: [{title: 'New Event This Weekend', desc:'hey gang we have this dope shit goign on this weekend and you should really come, itd be supperrr dope and wed really love to hang', date:{day:'11/25/18', time:'7:00 pm'}} ]
     }
   }
 
@@ -28,7 +28,7 @@ class Home extends Component  {
       <div className="feed-container">
         {
           this.state.feed.length ? 
-            <Feed />
+            <Feed  posts={this.state.feed}/>
             :
             <NoFeed />
         }
