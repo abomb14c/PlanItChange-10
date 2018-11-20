@@ -1,0 +1,6 @@
+.post-container {
+  width: 30%;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
+}

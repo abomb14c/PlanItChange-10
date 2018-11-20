@@ -1,12 +1,15 @@
 import React from 'react';
+import './feed.css';
+
+import Post from '../../containers/Post/Post';
 
 export const Feed = (props) => {
  const { posts } = props; 
  const displayFeed = posts.map(post => {
-  //  return post
+   return <Post post={post} />
  })
   return (
-    <div>
+    <div className="feed">
       {displayFeed}
     </div>
   )
