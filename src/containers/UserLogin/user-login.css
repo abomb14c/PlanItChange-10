@@ -5,6 +5,7 @@
   font-size: 14px;
   width: 83%;
   height: 35px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
 }
 
 .login-button:hover {
@@ -22,6 +23,7 @@
   margin-bottom: 5%;
   padding-left: 2%;
   width: 80%;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
 }
 
 .login-title {

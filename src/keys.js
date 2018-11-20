@@ -1,0 +1,1 @@
+export const googlePlaces = 'AIzaSyBJZVeTPd3zPYrbPLL9I-GCofakF9wN1y4'
