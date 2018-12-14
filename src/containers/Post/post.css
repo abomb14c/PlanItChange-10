@@ -24,17 +24,19 @@
 .interact-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 50px;
   width: 100%;
   padding-left: 2%;
 }
 
 .like-container {
-  width: 10%;
-  height: 100%;
+  width: 8%;
+  height: 90%;
   background-image: url('../../Assets/origami-bird (1).png');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 90%;
 }
 
 .like-container:hover {
@@ -47,4 +49,11 @@
   background-position: center;
   width: 10%;
   height: 100%;
+}
+
+.reply-button {
+  width: 10%;
+  height: 100%;
+  background-image: url('../../Assets/reply.png');
+  background-repeat: no-repeat; 
 }

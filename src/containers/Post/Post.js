@@ -50,11 +50,11 @@ class Post extends Component {
             onClick={this.updateLikes}
             className={this.state.updated ? 'like-container' : 'static-icon'}
             >
-            {/* <div
-              className={this.state.updated === true ? 'like-container' : 'static-icon'}
-            >
-            </div> */}
             </div>
+            <div
+            onClick={this.replyToPost}
+            className='reply-button'
+            />
         </div>
       </div>
     )
