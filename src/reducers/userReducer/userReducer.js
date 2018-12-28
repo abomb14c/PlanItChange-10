@@ -1,6 +1,5 @@
-const intitialState = {};
+const intitialState = {user_id: 3};
 
-// user_id: 3
 const userReducer = (state = intitialState, action) => {
   switch (action.type) {
     case "ADD_USER":

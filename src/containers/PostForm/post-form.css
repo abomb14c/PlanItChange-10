@@ -5,6 +5,7 @@
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
   margin-top: 2%;
   padding-top: 1%;
+  margin-bottom: 5%;
 }
 
 .post-form {
@@ -33,6 +34,7 @@
   border-color: #7E8F7C;
   color: #fff;
   font-size: 18px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
 }
 
 .label {

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 // import Script from 'react-load-script';
 import LocationAutocomplete from 'location-autocomplete';
 import {googlePlaces} from '../../keys';
-
+import { addUserFetch } from '../../ApiCalls/apiCalls';
 
 
 export class CreateUser extends Component {
@@ -42,10 +42,10 @@ export class CreateUser extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
   
-    // const response = await addUserFetch(this.state);
+    const response = await addUserFetch(this.state);
     // this.props.handleSignup({userId: response.userId, 
     //   username: this.state.username});
-  
+    return response
   }
   
   render() {
