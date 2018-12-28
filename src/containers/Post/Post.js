@@ -8,8 +8,8 @@ class Post extends Component {
 
     this.state= {
       likes: 0,
-      updated: false
-
+      updated: false,
+      reply: false
     }
   }
 
@@ -32,6 +32,10 @@ class Post extends Component {
       })
       console.log(this.state)
     }
+  }
+
+  replyToPost = () => {
+    this.state.reply = !this.state.reply;
   }
 
   componentDidMount = () => {
